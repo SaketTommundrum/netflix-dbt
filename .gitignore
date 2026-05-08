@@ -1,2 +1,4 @@
 netflix-dbt-user_accessKeys.csv
 .env
+netflix-dbt-env
+/logs/
