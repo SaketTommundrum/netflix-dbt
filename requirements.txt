@@ -1,0 +1,7 @@
+dbt-core==1.11.9
+dbt-snowflake==1.9.0
+boto3==1.43.5
+
+# Optional / recommended
+# urllib3
+# cryptography
