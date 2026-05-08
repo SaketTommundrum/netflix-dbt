@@ -1,0 +1,80 @@
+[
+  {
+    "macro_span": {
+      "start": {
+        "line": 1,
+        "col": 1,
+        "index": 0
+      },
+      "stop": {
+        "line": 6,
+        "col": 3,
+        "index": 96
+      }
+    },
+    "expanded_span": {
+      "start": {
+        "line": 1,
+        "col": 1,
+        "index": 0
+      },
+      "stop": {
+        "line": 1,
+        "col": 1,
+        "index": 0
+      }
+    }
+  },
+  {
+    "macro_span": {
+      "start": {
+        "line": 9,
+        "col": 19,
+        "index": 141
+      },
+      "stop": {
+        "line": 9,
+        "col": 43,
+        "index": 165
+      }
+    },
+    "expanded_span": {
+      "start": {
+        "line": 4,
+        "col": 19,
+        "index": 45
+      },
+      "stop": {
+        "line": 4,
+        "col": 42,
+        "index": 68
+      }
+    }
+  },
+  {
+    "macro_span": {
+      "start": {
+        "line": 20,
+        "col": 1,
+        "index": 301
+      },
+      "stop": {
+        "line": 22,
+        "col": 12,
+        "index": 411
+      }
+    },
+    "expanded_span": {
+      "start": {
+        "line": 15,
+        "col": 1,
+        "index": 204
+      },
+      "stop": {
+        "line": 15,
+        "col": 1,
+        "index": 204
+      }
+    }
+  }
+]
