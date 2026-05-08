@@ -2,3 +2,4 @@ netflix-dbt-user_accessKeys.csv
 .env
 netflix-dbt-env/
 logs/
+aws_chunking_ratings
