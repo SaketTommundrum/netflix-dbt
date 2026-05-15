@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\Saket Tommundrum\\netflix-dbt\\netflix-dbt-env\\Scripts\\python.exe",
+  "python.pythonPath": "C:\\Users\\Saket Tommundrum\\netflix-dbt\\netflix-dbt-env\\Scripts\\python.exe",
+  "dbt.path": "C:\\Users\\Saket Tommundrum\\AppData\\Roaming\\Python\\Python311\\Scripts\\dbt.exe",
+  "dbt.executable": "C:\\Users\\Saket Tommundrum\\AppData\\Roaming\\Python\\Python311\\Scripts\\dbt.exe"
+}

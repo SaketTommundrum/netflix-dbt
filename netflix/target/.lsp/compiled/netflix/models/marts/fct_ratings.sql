@@ -12,3 +12,5 @@ SELECT
 FROM src_ratings
 WHERE rating_timestamp IS NOT NULL
 
+
+    AND rating_timestamp> (SELECT MAX(rating_timestamp) FROM NETFLIX.DEV.fct_ratings)

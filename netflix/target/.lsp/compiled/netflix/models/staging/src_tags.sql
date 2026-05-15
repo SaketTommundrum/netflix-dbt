@@ -1,3 +1,5 @@
+
+
 WITH raw_tags AS (
     SELECT * FROM NETFLIX.RAW.RAW_TAGS
 )

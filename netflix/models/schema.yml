@@ -1,0 +1,89 @@
+models:
+  - name: dim_movies
+    description: Dimension Table for Movies
+    columns:
+      - name: movie_id
+        description: Unique Id for each movie
+        data_tests:
+          - not_null
+          - unique
+      - name: movie_title
+        description: Name of the movie
+        data_tests:
+          - not_null
+      - name: genre_array
+        description: Movies' list of genres that it belongs to
+      - name: genres
+        description: Movies' genres
+        data_tests:
+          - not_null
+    
+  - name: dim_users
+    description: Dimension Table for Users
+    columns:
+      - name: user_id
+        description: Unique Id for each user
+        data_tests:
+          - not_null
+          - unique
+  
+  - name: dim_genome_tags
+    description: Dimension Table for Genome Tags
+    columns:
+      - name: tag_id
+        description: Unique id for each genome tag
+        data_tests:
+          - not_null
+          - unique
+      - name: tag_name
+        description: Human-friendly tag name (trimmed and title-cased)
+        data_tests:
+          - not_null
+
+  - name: fct_ratings
+    description: Fact table of user ratings for movies
+    columns:
+      - name: user_id
+        description: Foreign key to dim_users
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_users')
+                field: user_id
+          - not_null
+      - name: movie_id
+        description: The id of the movie being rated
+        data_tests:
+          - relationships:
+              arguments: 
+                to: ref('dim_movies')
+                field: movie_id
+          - not_null
+      - name: rating
+        description: Rating value given by the user (numeric)
+        data_tests:
+          - not_null
+      - name: rating_timestamp
+        description: Timestamp when the rating was created
+        data_tests:
+          - not_null
+
+  - name: fct_genome_score
+    description: Fact table of genome tag relevance scores for movies
+    columns:
+      - name: movie_id
+        description: Foreign key to dim_movies
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_movies')
+                field: movie_id
+          - not_null
+      - name: tag_id
+        description: The id of the genome tag
+        data_tests:
+          - not_null
+      - name: relevance_score
+        description: Rounded relevance score for the tag (precision 4)
+        data_tests:
+          - not_null
